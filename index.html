@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#10024 FIZIKA &#10024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+</body>
+<script>
+
+    const fejecske = document.createElement("header")
+    document.body.appendChild(fejecske)
+
+    const testecske = document.createElement("main")
+    document.body.appendChild(testecske)
+
+    const cim = document.createElement("h1")
+    const cimszoveg = document.createTextNode("Fizika")
+    cim.appendChild(cimszoveg)
+    fejecske.appendChild(cim)
+
+    const alcim = document.createElement("p")
+    const alcimszoveg = document.createTextNode("- szemléltető")
+    alcim.appendChild(alcimszoveg)
+    fejecske.appendChild(alcim)
+
+    const kinematika = document.createElement("details")
+    const sum = document.createElement("summary")
+    const sumszöv = document.createTextNode("Kinematika")
+    sum.appendChild(sumszöv)
+    kinematika.appendChild(sum)
+
+    for (let i = 0; i < 4; i++) {
+        const kartya = document.createElement("div")
+        const divpeldaszoveg = document.createTextNode(i)
+        kartya.appendChild(divpeldaszoveg)
+        kinematika.appendChild(kartya)
+    }
+    testecske.appendChild(kinematika)
+
+</script>
+</html>
