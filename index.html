@@ -10,6 +10,29 @@
     
 </body>
 <script>
+    let témakörök=[
+        "Kinematika",
+        "Dinamika",
+        "Körmozgás",
+        "Rezgőmozgás",
+        "Merev test egyensúlya",
+        "Forgómozgás",
+        "Gravitáció és naprendszer",
+        "Hőtan",
+        "Halmazállapotváltozás",
+        "Folyadékok, gázok mechanikája",
+        "Eleketromos mező",
+        "Kondenzátor",
+        "mágneses mező"
+    ]
+
+    const feladatok = [
+    { nev: "sebesség", tema: "Kinematika" },
+    { nev: "gyorsulás", tema: "Kinematika" },
+    { nev: "ketiranyu", tema: "Kinematika" },
+    { nev: "korpillango", tema: "Kinematika" },
+    { nev: "389", tema: "Dinamika" },
+    ];
 
     const fejecske = document.createElement("header")
     document.body.appendChild(fejecske)
@@ -27,19 +50,22 @@
     alcim.appendChild(alcimszoveg)
     fejecske.appendChild(alcim)
 
-    const kinematika = document.createElement("details")
-    const sum = document.createElement("summary")
-    const sumszöv = document.createTextNode("Kinematika")
-    sum.appendChild(sumszöv)
-    kinematika.appendChild(sum)
+    for (let j = 0; j < témakörök.length; j++) {
+        const témakör = document.createElement("details") //feljegyzes magamnak későbbre: Ha több detailsem van és szeretném h egymás után csuk nyitódjanak elég egyforma name-t adni nekik. ::marker-el a háromszöget lehet style-olni
+        const szum = document.createElement("summary")
+        const szumszov = document.createTextNode(témakörök[j])
+        szum.appendChild(szumszov)
+        témakör.appendChild(szum)
 
-    for (let i = 0; i < 4; i++) {
-        const kartya = document.createElement("div")
-        const divpeldaszoveg = document.createTextNode(i)
-        kartya.appendChild(divpeldaszoveg)
-        kinematika.appendChild(kartya)
-    }
-    testecske.appendChild(kinematika)
+        for (let i = 0; i < 4; i++) {
+            const kartya = document.createElement("div")
+            const divpeldaszoveg = document.createTextNode(i)
+            kartya.appendChild(divpeldaszoveg)
+            témakör.appendChild(kartya)
+        }
+        testecske.appendChild(témakör)
+        }
 
+            
 </script>
 </html>
