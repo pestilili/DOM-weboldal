@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&#10024 FIZIKA &#10024</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -21,17 +22,17 @@
         "Hőtan",
         "Halmazállapotváltozás",
         "Folyadékok, gázok mechanikája",
-        "Eleketromos mező",
+        "Elektromos mező",
         "Kondenzátor",
-        "mágneses mező"
+        "Mágneses mező"
     ]
 
     const feladatok = [
-    { nev: "sebesség", tema: "Kinematika" },
-    { nev: "gyorsulás", tema: "Kinematika" },
-    { nev: "ketiranyu", tema: "Kinematika" },
-    { nev: "korpillango", tema: "Kinematika" },
-    { nev: "389", tema: "Dinamika" },
+    { nev: "sebesség", tema: "Kinematika", kep: "kinematika1.png"},
+    { nev: "gyorsulás", tema: "Kinematika", kep: "kinematika2..png"},
+    { nev: "ketiranyu", tema: "Kinematika", kep: "kinematika3.png"},
+    { nev: "korpillango", tema: "Körmozgás", kep: "kormozgas1.png"},
+    { nev: "389", tema: "Dinamika", kep: "dinamika1.png" },
     ];
 
     const fejecske = document.createElement("header")
@@ -57,11 +58,13 @@
         szum.appendChild(szumszov)
         témakör.appendChild(szum)
 
-        for (let i = 0; i < 4; i++) {
-            const kartya = document.createElement("div")
-            const divpeldaszoveg = document.createTextNode(i)
-            kartya.appendChild(divpeldaszoveg)
-            témakör.appendChild(kartya)
+        for (let i = 0; i < feladatok.length; i++) {
+            if (feladatok[i].tema == témakörök[j]) {
+                const kartya = document.createElement("div")
+                kartya.style.backgroundImage = `url('${feladatok[i].kep}')`
+                témakör.appendChild(kartya)
+            }
+            
         }
         testecske.appendChild(témakör)
         }
