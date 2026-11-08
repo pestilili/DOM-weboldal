@@ -37,16 +37,26 @@ header h1{
 
 main{
     background-color: var(--sargas);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+}
+
+details::details-content{
     display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
 }
 
 details div{
     background-color: var(--feher_szeru);
-    border: 1px ,--pirosra_hajazo;
+    border: 1px solid var(--pirosra_hajazo);
     padding: 10px;
-    font-size: 30px;
     text-align: center;
-   
 }
+
+summary{
+    font-size:xx-large;
+}
+
+
