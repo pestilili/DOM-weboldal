@@ -57,9 +57,39 @@ summary{
     font-size: 2.5em;
     padding: 8px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 summary:hover{
     transform: scale(1.02)
+}
+
+.kocsi{
+    width: 400px;
+    height: 300px;
+    margin-left: 5%;
+    margin-top: 10%;
+    background-image: url(kocsi.png);
+    transition-property: transform;
+    transition-timing-function: linear;
+}
+
+label{
+    font-size: xx-large;
+    padding: 30px;
+}
+
+input{
+    font-size: xx-large;
+}
+
+button{
+    float: left;
+    margin: 100px;
+    font-size: xx-large;
+}
+
+p{
+    font-size: xx-large;
 }
 

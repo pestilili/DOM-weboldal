@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinematika Probléma 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+</body>
+<script>
+    const kocsi = document.createElement("div")
+    kocsi.classList.add("kocsi")
+    document.body.appendChild(kocsi)
+
+    const seblab = document.createElement("label")
+    seblab.textContent = "Sebesség: (m/s)"
+    seblab.htmlFor = "seb"
+
+    const sebesseg = document.createElement("input")
+    sebesseg.type = "text"
+    sebesseg.id = "seb"
+    document.body.appendChild(seblab)
+    document.body.appendChild(sebesseg)
+
+    const utlab = document.createElement("label")
+    utlab.textContent = "Meteendő út: (m)"
+    utlab.htmlFor = "ut"
+
+    const ut = document.createElement("input")
+    ut.type = "text"
+    ut.id = "ut"
+    document.body.appendChild(utlab)
+    document.body.appendChild(ut)
+
+    const gomb = document.createElement("button");
+    gomb.textContent = "Számol";
+    document.body.append(gomb);
+    
+    const kiir = document.createElement("p");
+    document.body.append(gomb, kiir);
+
+    gomb.addEventListener("click", () => {
+        const v = Number(sebesseg.value);
+        const s = Number(ut.value);
+
+        const t = s / v;     
+        const px = s * 10;   
+
+        kiir.textContent = "Eltelt idő: " + t + " s";
+
+        kocsi.style.transitionDuration = "0s";
+        kocsi.style.transform = "translateX(0px)";
+        kocsi.offsetWidth; 
+
+        kocsi.style.transitionDuration = t + "s";
+        kocsi.style.transform = "translateX(" + px + "px)";
+});
+
+</script>
+</html>
